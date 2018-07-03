@@ -6,18 +6,19 @@
     <description>Recent content in Posts on DataTq4</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 02 Jul 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 03 Jul 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>First Test</title>
-      <link>/2018/07/02/first-test/</link>
-      <pubDate>Mon, 02 Jul 2018 00:00:00 +0000</pubDate>
+      <title>Site Purpose</title>
+      <link>/2018/07/03/site-purpose/</link>
+      <pubDate>Tue, 03 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/2018/07/02/first-test/</guid>
-      <description>r &amp;lt;- c(1, 2, 3, 4) head(r) ## [1] 1 2 3 4 </description>
+      <guid>/2018/07/03/site-purpose/</guid>
+      <description>Not too long ago, I decided that website creation wasn&amp;rsquo;t my cup of tea, so finding a purpose to build and maintain a website (besides putting on resume) was my first step in this site&amp;rsquo;s creation.
+Purpose I took a step back and thought about what this website would represent in terms of context and usefulness for people who happen to stumble across it. What stood out to me was Data.</description>
     </item>
     
   </channel>
