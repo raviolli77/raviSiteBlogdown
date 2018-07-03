@@ -4,7 +4,6 @@ author: ~
 date: "2018-07-04"
 showDate: true
 slug: site-purpose
-summary: "Musings over website creation"
 categories: []
 tags: [meta, datascience]
 ---
