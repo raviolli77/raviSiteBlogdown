@@ -1,7 +1,9 @@
 ---
 title: Site Purpose
 author: ~
-date: '2018-07-03'
+date: 2018-07-03
+thumbnailImagePosition: left
+thumbnailImage: //d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city-750.jpg
 slug: site-purpose
 categories: []
 tags: [meta, datascience]

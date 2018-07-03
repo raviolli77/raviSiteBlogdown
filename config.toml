@@ -10,7 +10,6 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [permalinks]
     post = "/:year/:month/:day/:slug/"
-    dateFormat = "2006/01/02"
     
 [taxonomies]
   tag = "tags"
@@ -68,9 +67,10 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     
     sidebarBehavior = 2
     imageGallery = true
-    thumbnailImage = true
     thumbnailImagePosition = "bottom"
     autoThumbnailImage = true
+    # Display thumbnail image of each post on index pages (false: disabled, true: enabled)
+    thumbnailImage = true
     # Background
     coverImage = "cover.jpg"
     # Sharing Options
