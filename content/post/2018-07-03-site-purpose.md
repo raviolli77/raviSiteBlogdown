@@ -1,7 +1,7 @@
 ---
 title: Site Purpose
 author: ~
-date: "2018-07-04"
+date: "2018-07-03"
 showDate: true
 slug: site-purpose
 categories: []
