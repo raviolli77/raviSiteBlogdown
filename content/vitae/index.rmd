@@ -1,6 +1,7 @@
 ---
 title: "Curriculum Vitae"
 date: "/:year/:month/:day/"
+disable_comments: false
 ---
 
 ---
