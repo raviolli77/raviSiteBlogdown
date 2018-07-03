@@ -51,6 +51,8 @@ Purpose I took a step back and thought about what this website would represent i
     
 
     
+      <meta property="og:image" content="//d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city-750.jpg">
+    
     
     
 
@@ -218,7 +220,7 @@ Purpose I took a step back and thought about what this website would represent i
 
 <p>Enter this blog, I want to use this blog to give useful tidbits regarding all things data science. When I first started self-teaching myself data science, online blogs were fundamental in my journey. I would not be where I am at without the kindness of random strangers who have experience the same problems and decided to write about them.</p>
 
-<p>This is what I aim to do and hope anyone reading this will benefit from and in turn pay it forward for anyone just starting their data science career.</p>
+<p>This is what I aim to do and hope anyone reading this will benefit from and in turn pay it forward for other people starting their data science career.</p>
 
 <h2 id="resources">Resources</h2>
 
@@ -234,6 +236,18 @@ Purpose I took a step back and thought about what this website would represent i
           </div>
           <div id="post-footer" class="post-footer main-content-wrap">
             
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small"></span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="/tags/meta/">meta</a>
+
+  <a class="tag tag--primary tag--small" href="/tags/datascience/">datascience</a>
+
+                  </div>
+                
               
             
             
@@ -288,6 +302,12 @@ Purpose I took a step back and thought about what this website would represent i
         
       
       
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
       <li class="post-action">
         
           <a class="post-action-btn btn btn--default" href="#">
@@ -300,6 +320,10 @@ Purpose I took a step back and thought about what this website would represent i
 
 
             
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
               
             
           </div>
@@ -363,6 +387,12 @@ Purpose I took a step back and thought about what this website would represent i
           </li>
         
       
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
       
       <li class="post-action">
         
@@ -502,6 +532,28 @@ $(document).ready(function() {
 
 
   
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = '\/2018\/07\/03\/site-purpose\/';
+          
+            this.page.identifier = '\/2018\/07\/03\/site-purpose\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'rauleulogio-com';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
     
   
 

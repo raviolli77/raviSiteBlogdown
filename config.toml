@@ -67,13 +67,14 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     
     sidebarBehavior = 2
     imageGallery = true
-    thumbnailImagePosition = "bottom"
-    autoThumbnailImage = true
-    # Display thumbnail image of each post on index pages (false: disabled, true: enabled)
-    thumbnailImage = true
+    
     # Background
-    coverImage = "cover.jpg"
-    # Sharing Options
+    coverImage = "cover.jpg"  
+    # Custom CSS. Put here your custom CSS files. They are loaded after the theme CSS;
+    # they have to be referred from static root. Example
+    # [[params.customCSS]]
+    #   href = "css/mystyle.css
+  # Sharing Options
   [[params.sharingOptions]]
     name = "Facebook"
     icon = "fa-facebook-official"

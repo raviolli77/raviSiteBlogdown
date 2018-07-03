@@ -1,16 +1,19 @@
 ---
 title: Site Purpose
 author: ~
-date: 2018-07-03
-thumbnailImagePosition: left
-thumbnailImage: //d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city-750.jpg
+date: "2018-07-04"
+showDate: true
 slug: site-purpose
+summary: "Musings over website creation"
 categories: []
 tags: [meta, datascience]
 ---
- 
+
 
 Not too long ago, I decided that website creation wasn't my cup of tea, so finding a purpose to build and maintain a website (besides putting on resume) was my first step in this site's creation. 
+
+<!--more-->
+
 
 ## Purpose
 

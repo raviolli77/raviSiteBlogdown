@@ -6,19 +6,29 @@
     <description>Recent content on DataTq4</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 03 Jul 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 04 Jul 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Site Purpose</title>
-      <link>/2018/07/03/site-purpose/</link>
+      <link>/2018/07/04/site-purpose/</link>
+      <pubDate>Wed, 04 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/07/04/site-purpose/</guid>
+      <description>&lt;p&gt;Not too long ago, I decided that website creation wasn&amp;rsquo;t my cup of tea, so finding a purpose to build and maintain a website (besides putting on resume) was my first step in this site&amp;rsquo;s creation.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Curriculum Vitae</title>
+      <link>/vitae/</link>
       <pubDate>Tue, 03 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/2018/07/03/site-purpose/</guid>
-      <description>Not too long ago, I decided that website creation wasn&amp;rsquo;t my cup of tea, so finding a purpose to build and maintain a website (besides putting on resume) was my first step in this site&amp;rsquo;s creation.
-Purpose I took a step back and thought about what this website would represent in terms of context and usefulness for people who happen to stumble across it. What stood out to me was Data.</description>
+      <guid>/vitae/</guid>
+      <description>Co-FounderInertia7.com (July 2017 - today)Contributed to over 30% of the open-source data science knowledge base on the web applicationIncreased website traffic with integration of Data Science @ UCSB and Data Science Inc.Content WriterData Science Inc. (December 2017 – now)Contributed guest articles featuring walk-throughs for data science applicationsExplained Machine Learning algorithms and implementation with both R and Python garnering over 4k viewsCreated interactive dashboards to showcase machine learning models and time series forecasting using Shiny (R) and Dash (Python)Data AnalystHospice of Santa Barbara (July 2017 - today)Utilize the E.</description>
     </item>
     
     <item>
@@ -29,15 +39,6 @@ Purpose I took a step back and thought about what this website would represent i
       <guid>/about/</guid>
       <description>My name is Raul Eulogio. I&amp;rsquo;m an aspiring data scientist and all around dope ass dude.
 If you have any questions or want to collab hit me up!</description>
-    </item>
-    
-    <item>
-      <title>Curriculum Vitae</title>
-      <link>/vitae/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/vitae/</guid>
-      <description>Co-FounderInertia7.com (July 2017 - today)Contributed to over 30% of the open-source data science knowledge base on the web applicationIncreased website traffic with integration of Data Science @ UCSB and Data Science Inc.Content WriterData Science Inc. (December 2017 – now)Contributed guest articles featuring walk-throughs for data science applicationsExplained Machine Learning algorithms and implementation with both R and Python garnering over 4k viewsCreated interactive dashboards to showcase machine learning models and time series forecasting using Shiny (R) and Dash (Python)Data AnalystHospice of Santa Barbara (July 2017 - today)Utilize the E.</description>
     </item>
     
   </channel>
