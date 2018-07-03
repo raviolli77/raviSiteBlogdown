@@ -1,0 +1,93 @@
+baseurl = "/"
+languageCode = "en-us"
+title = "DataTq4"
+theme = "hugo-tranquilpeak-theme"
+googleAnalytics = ""
+paginate = 7
+canonifyurls = true
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+
+[permalinks]
+    post = "/:year/:month/:day/:slug/"
+    
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  archive = "archives"
+
+[author]
+  name = "Raul Eulogio"
+  bio = "Aspiring Data Jedi"
+  picture = "https://avatars0.githubusercontent.com/u/16966240?s=460&v=4"
+
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 1
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-home\"></i>"
+
+[[menu.main]]
+    name = "About Me"
+    url = "/about/"
+    weight = 2
+    pre = "<i class=\"sidebar-button-icon fa fa-lg fa-question\"></i>"
+
+[[menu.main]]
+    name = "CV"
+    url = "/vitae/"
+    weight = 3
+    pre = "<i class=\"sidebar-button-icon fa fa-lg fa-bookmark\"></i>"
+    
+[[menu.links]]
+    name = "GitHub"
+    url = "https://github.com/raviolli77"
+    weight = 2
+    pre = "<i class=\"sidebar-button-icon fa fa-lg fa-github\"></i>"
+
+[[menu.links]]
+    name = "Twitter"
+    url = "https://twitter.com/raviolli77"
+    weight = 3
+    pre = "<i class=\"sidebar-button-icon fa fa-lg fa-twitter\"></i>"
+
+[params]
+    description = "A website built through Hugo and blogdown by Raul Eulogio."
+
+    # options for highlight.js (version, additional languages, and theme)
+    #highlightjsVersion = "9.11.0"
+    #highlightjsCDN = "//cdn.bootcss.com"
+    highlightjsLang = ["r", "yaml"]
+    highlightjsTheme = "github"
+    # Added stuff
+    dateFormat = "2 January 2006"
+    syntaxHighlighter = "highlight.js"
+    clearReading = true
+    hierarchicalCategories = true
+    
+    sidebarBehavior = 2
+    imageGallery = true
+    thumbnailImage = true
+    thumbnailImagePosition = "bottom"
+    autoThumbnailImage = true
+    # Background
+    coverImage = "cover.jpg"
+    # Sharing Options
+  [[params.sharingOptions]]
+    name = "Facebook"
+    icon = "fa-facebook-official"
+    url = "https://www.facebook.com/sharer/sharer.php?u=%s"
+
+  [[params.sharingOptions]]
+    name = "Twitter"
+    icon = "fa-twitter"
+    url = "https://twitter.com/intent/tweet?text=%s"
+
+  [[params.sharingOptions]]
+    name = "Google+"
+    icon = "fa-google-plus"
+    url = "https://plus.google.com/share?url=%s"
+
+    MathJaxCDN = "//cdn.bootcss.com"
+    MathJaxVersion = "2.7.1"
+    
+custom_css = ["style.css"]

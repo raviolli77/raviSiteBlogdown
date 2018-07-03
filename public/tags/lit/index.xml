@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lit on Data Rules Everthing Around Me</title>
+    <link>/tags/lit/</link>
+    <description>Recent content in Lit on Data Rules Everthing Around Me</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 23 Jul 2015 21:13:14 -0500</lastBuildDate>
+    
+	<atom:link href="/tags/lit/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Raul Eulogio&#39;s Website</title>
+      <link>/2015/07/23/raul-eulogios-website/</link>
+      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      
+      <guid>/2015/07/23/raul-eulogios-website/</guid>
+      <description>Hello World Welcome to my site…
+Now fuck off
+ Including Plots You can also embed plots. See Figure 1 for example:
+par(mar = c(0, 1, 0, 1)) pie( c(280, 60, 20), c(&amp;#39;Sky&amp;#39;, &amp;#39;Sunny side of pyramid&amp;#39;, &amp;#39;Shady side of pyramid&amp;#39;), col = c(&amp;#39;#0292D8&amp;#39;, &amp;#39;#F7EA39&amp;#39;, &amp;#39;#C4B632&amp;#39;), init.angle = -50, border = NA )  Figure 1: A fancy pie chart.   </description>
+    </item>
+    
+  </channel>
+</rss>

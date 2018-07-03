@@ -1,0 +1,54 @@
+---
+title: "Curriculum Vitae"
+date: "/:year/:month/:day/"
+---
+
+---
+###### Experience
+---
+
+### Co-Founder
+
+#### Inertia7.com (July 2017 - today)
+
++ Contributed to over 30% of the open-source data science knowledge base on the web
+application
++ Increased website traffic with integration of Data Science @ UCSB and Data Science Inc.
+
+
+### Content Writer
+#### Data Science Inc. (December 2017 – now)
++ Contributed guest articles featuring walk-throughs for data science applications
++ Explained Machine Learning algorithms and implementation with both R and Python garnering over 4k views
++ Created interactive dashboards to showcase machine learning models and time series forecasting using Shiny (R) and Dash (Python)
+
+### Data Analyst
+#### Hospice of Santa Barbara (July 2017 - today)
+
++ Utilize the E.T.L. (extract, transform, load) process using PostgreSQL to spearhead data warehousing within the non-profit organization
++ Create concise reports in R and Python to understand organizational and client demographics
++ Analyze and query databases using PostgreSQL to consolidate data and understand patterns in patient care
+
+### President (Previous: Project Manager)
+####  Data Science at UCSB (Project Manager: January 2017 – October 2017 - President: November 2017 - today)
+
++ Mentor students of all skill level to build and publish data science projects for increased exposure to industry work
++ Plan and host workshops on SQL, Python, and various frameworks to allow students to gain familiarity in accelerated working environments
++ Oversee the weekly operations of the club to increase notoriety on campus and in Santa Barbara
++ Correspond with industry leaders, faculty, and experts in the data science field to expand club network and procure sponsorships and opportunities
+
+---
+###### EDUCATION
+---
+
+### Bachelor of Science, Statistical Science 
+#### University of California, Santa Barbara (2016)
+
++ Relevant Coursework: Regression Analysis, Time Series, Risk Theory, Data Mining, Design of
+Experiments, Sampling Techniques, Non-Parametric Methods
+
+---
+###### ATTRIBUTES
+---
+
+Event Planning (Django Girls - Santa Barbara), Statistics, Machine Learning, R, Python, SQL (MySQL, PostgreSQL), Git, Linux (Ubuntu), Windows, Public Speaking, pySpark, Shiny, Dash
