@@ -28,7 +28,7 @@ For much of the write up that I produce for inertia7, it is very technical and c
 
 I wanted to make this website a departure from that style of writing, along with wanting something less formal and project oriented. There were often times where I wanted to create a quick blurb regarding a certain concept without attaching it to a specific project or dataset. The main reasoning for this is because I'm a workaholic, meaning that often times when my intention is to do a quick blurb I end up spewing massive amounts of information or unintentionally creating a new project. I have felt this can be overwhelming to people and can derail the original intention. As well as being time consuming as all hell. 
 
-## Enter my blog
+## Enter this Blog
 
 Enter this blog, I want to use this blog to give useful tidbits regarding all things data science. When I first started self-teaching myself data science, online blogs were fundamental in my journey. I would not be where I am at without the kindness of random strangers who have experience the same problems and decided to write about them. 
 
