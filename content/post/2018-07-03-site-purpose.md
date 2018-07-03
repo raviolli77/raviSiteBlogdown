@@ -4,7 +4,7 @@ author: ~
 date: '2018-07-03'
 slug: site-purpose
 categories: []
-tags: []
+tags: [meta, datascience]
 ---
  
 
