@@ -60,7 +60,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     highlightjsLang = ["r", "yaml"]
     highlightjsTheme = "github"
     # Added stuff
-    dateFormat = "2 January 2006"
+    dateFormat = "2006-01-02"
     syntaxHighlighter = "highlight.js"
     clearReading = true
     hierarchicalCategories = true

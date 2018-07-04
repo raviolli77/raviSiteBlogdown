@@ -1,6 +1,6 @@
 ---
 title: "About Me"
-date: "/:year/:month/:day/:slug/"
+date: "2018-03-07"
 ---
 
 My name is Raul Eulogio. I'm an aspiring data scientist and all around dope ass dude. 
