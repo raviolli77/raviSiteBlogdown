@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on DataTq4</title>
-    <link>https://rauleulogio.com/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on DataTq4</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 03 Jul 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://rauleulogio.com/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Datascience</title>
-      <link>https://rauleulogio.com/tags/datascience/</link>
+      <link>/tags/datascience/</link>
       <pubDate>Tue, 03 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://rauleulogio.com/tags/datascience/</guid>
+      <guid>/tags/datascience/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Meta</title>
-      <link>https://rauleulogio.com/tags/meta/</link>
+      <link>/tags/meta/</link>
       <pubDate>Tue, 03 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://rauleulogio.com/tags/meta/</guid>
+      <guid>/tags/meta/</guid>
       <description></description>
     </item>
     
