@@ -3,7 +3,7 @@ title: Benchmarking Code in Python
 author: ~
 date: '2018-07-09'
 slug: benchmarking-code-in-python
-categories: [python, datascience]
+categories: []
 tags: [python, benchmarking, pandas, numpy, ufunc, datascience]
 ---
 
@@ -24,6 +24,8 @@ First we will load the appropriate packages, in this case we will be using `nump
 import numpy as np
 import timeit
 import matplotlib.pyplot as plt
+# For ggplot2 style plots
+plt.style.use('ggplot')
 
 # Set random seed for reproducibility
 np.random.seed(42)
@@ -120,7 +122,7 @@ print(
     number = 1000))
 ```
 
-    0.026163638998696115
+    0.019325109002238605
     
 Now the `ufunc` operation:
 
@@ -131,7 +133,7 @@ print(
     number = 1000))
 ```
 
-    0.0069110949989408255
+    0.004530509999312926
     
 
 # Bootstrapping Benchmarking Methods
@@ -175,15 +177,18 @@ So each key will have the values in a list from the first value (100) to the las
 Next we will visualize the difference by ploting our index as our x-axis and y-axis containing the time it took to calculate that n-dimension array. 
 
 ```python
+fig, ax = plt.subplots()
+
+ax.set_facecolor("#fafafa")
 plt.plot(vector_dict['index'], vector_dict['vectorized'], 'r')
 plt.plot(vector_dict['index'], vector_dict['for_loop'], 'g')
-plt.legend(('Map', 'For Loop'))
+plt.legend(('Vectorized Operation', 'For Loop'))
 plt.xlabel('Length of Randomly Created Arrays')
 plt.ylabel('Time for operation (1000 iterations for each array)')
 plt.show()
 ```
 
-![](https://i.imgur.com/7dNNSpi.png)
+![](https://i.imgur.com/0sXn7AJ.png)
 
 Now we can notice the huge difference in operations and the time it took to calculate them over different sized arrays. That cray-cray!
 

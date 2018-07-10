@@ -2,75 +2,75 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on DataTq4</title>
-    <link>https://rauleulogio.com/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on DataTq4</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 09 Jul 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://rauleulogio.com/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Benchmarking</title>
-      <link>https://rauleulogio.com/tags/benchmarking/</link>
+      <link>/tags/benchmarking/</link>
       <pubDate>Mon, 09 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://rauleulogio.com/tags/benchmarking/</guid>
+      <guid>/tags/benchmarking/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Datascience</title>
-      <link>https://rauleulogio.com/tags/datascience/</link>
+      <link>/tags/datascience/</link>
       <pubDate>Mon, 09 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://rauleulogio.com/tags/datascience/</guid>
+      <guid>/tags/datascience/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Meta</title>
-      <link>https://rauleulogio.com/tags/meta/</link>
+      <link>/tags/meta/</link>
       <pubDate>Tue, 03 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://rauleulogio.com/tags/meta/</guid>
+      <guid>/tags/meta/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Numpy</title>
-      <link>https://rauleulogio.com/tags/numpy/</link>
+      <link>/tags/numpy/</link>
       <pubDate>Mon, 09 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://rauleulogio.com/tags/numpy/</guid>
+      <guid>/tags/numpy/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Pandas</title>
-      <link>https://rauleulogio.com/tags/pandas/</link>
+      <link>/tags/pandas/</link>
       <pubDate>Mon, 09 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://rauleulogio.com/tags/pandas/</guid>
+      <guid>/tags/pandas/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Python</title>
-      <link>https://rauleulogio.com/tags/python/</link>
+      <link>/tags/python/</link>
       <pubDate>Mon, 09 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://rauleulogio.com/tags/python/</guid>
+      <guid>/tags/python/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ufunc</title>
-      <link>https://rauleulogio.com/tags/ufunc/</link>
+      <link>/tags/ufunc/</link>
       <pubDate>Mon, 09 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://rauleulogio.com/tags/ufunc/</guid>
+      <guid>/tags/ufunc/</guid>
       <description></description>
     </item>
     
