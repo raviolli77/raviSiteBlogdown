@@ -4,7 +4,7 @@ author: ~
 date: '2018-07-09'
 slug: benchmarking-code-in-python
 categories: [python, datascience]
-tags: [python, benchmarking, pandas, numpy, ufunc]
+tags: [python, benchmarking, pandas, numpy, ufunc, datascience]
 ---
 
 When I first started programming I started to get the hang of `for-loops` and I basically applied them to everything that was iterable. Upon learning more about efficient coding for data science, I learned about vectorization (mostly through R and pySpark), so I wanted to showcase a simple case study as to when vectorization reigns supreme over `for-loops`.  
