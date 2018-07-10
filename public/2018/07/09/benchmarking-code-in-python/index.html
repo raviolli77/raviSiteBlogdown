@@ -256,7 +256,7 @@ np.random.seed(42)
 
 <p>But if I were to give a TLDR; if you need to do an operation on data that doesn&rsquo;t require too many conditional statements use vectorized operations.</p>
 
-<p>It is written as such:</p>
+<p>The operation is written as such:</p>
 
 <pre><code class="language-python">np.add.reduce(vector)
 </code></pre>
@@ -327,7 +327,7 @@ np.random.seed(42)
 <pre><code>0.0069110949989408255
 </code></pre>
 
-<h1 id="benchmarking-methods">Benchmarking Methods</h1>
+<h1 id="bootstrapping-benchmarking-methods">Bootstrapping Benchmarking Methods</h1>
 
 <p>Its already pretty obvious that the <code>numpy</code> operations performs significantly better than the <code>vector_sum</code> function, but to drive the point home I will do a loop that will do these operations on randomly generated arrays. The arrays will vary in size starting with an array of size 100 and ending with an array of size 10000.</p>
 

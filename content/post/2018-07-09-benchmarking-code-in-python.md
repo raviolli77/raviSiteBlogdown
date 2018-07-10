@@ -54,7 +54,7 @@ You can read more [here](https://docs.scipy.org/doc/numpy/reference/ufuncs.html)
 
 But if I were to give a TLDR; if you need to do an operation on data that doesn't require too many conditional statements use vectorized operations. 
 
-It is written as such:
+The operation is written as such:
 
 ```python
 np.add.reduce(vector)
@@ -132,7 +132,7 @@ print(
     0.0069110949989408255
     
 
-# Benchmarking Methods
+# Bootstrapping Benchmarking Methods
 
 Its already pretty obvious that the `numpy` operations performs significantly better than the `vector_sum` function, but to drive the point home I will do a loop that will do these operations on randomly generated arrays. The arrays will vary in size starting with an array of size 100 and ending with an array of size 10000. 
 

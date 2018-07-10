@@ -1,5 +1,4 @@
-.code {
-  background-color: black;
-  font-family: "Courier New", Courier, monospace;
+pre,
+code {
+    background-color: #000000;
 }
-
