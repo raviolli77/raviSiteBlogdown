@@ -3,57 +3,104 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/vitae/</loc>
+    <loc>https://rauleulogio.com/2018/07/09/benchmarking-code-in-python/</loc>
+    <lastmod>2018-07-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rauleulogio.com/vitae/</loc>
     <lastmod>2018-07-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/2018/07/03/site-purpose/</loc>
+    <loc>https://rauleulogio.com/2018/07/03/site-purpose/</loc>
     <lastmod>2018-07-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/about/</loc>
+    <loc>https://rauleulogio.com/about/</loc>
     <lastmod>2018-03-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/archives/</loc>
+    <loc>https://rauleulogio.com/archives/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/</loc>
+    <loc>https://rauleulogio.com/tags/benchmarking/</loc>
+    <lastmod>2018-07-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/</loc>
+    <loc>https://rauleulogio.com/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rauleulogio.com/</loc>
+    <lastmod>2018-07-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rauleulogio.com/tags/datascience/</loc>
     <lastmod>2018-07-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/datascience/</loc>
+    <loc>https://rauleulogio.com/categories/datascience/</loc>
+    <lastmod>2018-07-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rauleulogio.com/tags/meta/</loc>
     <lastmod>2018-07-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/meta/</loc>
-    <lastmod>2018-07-03T00:00:00+00:00</lastmod>
+    <loc>https://rauleulogio.com/tags/numpy/</loc>
+    <lastmod>2018-07-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/post/</loc>
-    <lastmod>2018-07-03T00:00:00+00:00</lastmod>
+    <loc>https://rauleulogio.com/tags/pandas/</loc>
+    <lastmod>2018-07-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/</loc>
-    <lastmod>2018-07-03T00:00:00+00:00</lastmod>
+    <loc>https://rauleulogio.com/post/</loc>
+    <lastmod>2018-07-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rauleulogio.com/tags/python/</loc>
+    <lastmod>2018-07-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rauleulogio.com/categories/python/</loc>
+    <lastmod>2018-07-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rauleulogio.com/tags/</loc>
+    <lastmod>2018-07-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rauleulogio.com/tags/ufunc/</loc>
+    <lastmod>2018-07-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

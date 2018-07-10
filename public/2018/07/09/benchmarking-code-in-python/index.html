@@ -1,0 +1,746 @@
+
+
+  
+    
+  
+
+
+  
+
+
+
+
+
+  
+
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.41 with theme Tranquilpeak 0.4.3-BETA">
+    <title>Benchmarking Code in Python</title>
+    <meta name="author" content="Raul Eulogio">
+    <meta name="keywords" content="">
+
+    <link rel="icon" href="https://rauleulogio.com/favicon.png">
+    
+
+    
+    <meta name="description" content="When I first started programming I started to get the hang of for-loops and I basically applied them to everything that was iterable. Upon learning more about efficient coding for data science, I learned about vectorization (mostly through R and pySpark), so I wanted to showcase a simple case study as to when vectorization reigns supreme over for-loops.
+Although I will state that for-loops do allow the user to be a little more intimate with the function call and I do encourage everyone to become efficient at loops :)">
+    <meta property="og:description" content="When I first started programming I started to get the hang of for-loops and I basically applied them to everything that was iterable. Upon learning more about efficient coding for data science, I learned about vectorization (mostly through R and pySpark), so I wanted to showcase a simple case study as to when vectorization reigns supreme over for-loops.
+Although I will state that for-loops do allow the user to be a little more intimate with the function call and I do encourage everyone to become efficient at loops :)">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Benchmarking Code in Python">
+    <meta property="og:url" content="/2018/07/09/benchmarking-code-in-python/">
+    <meta property="og:site_name" content="DataTq4">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="DataTq4">
+    <meta name="twitter:description" content="When I first started programming I started to get the hang of for-loops and I basically applied them to everything that was iterable. Upon learning more about efficient coding for data science, I learned about vectorization (mostly through R and pySpark), so I wanted to showcase a simple case study as to when vectorization reigns supreme over for-loops.
+Although I will state that for-loops do allow the user to be a little more intimate with the function call and I do encourage everyone to become efficient at loops :)">
+    
+    
+
+    
+    
+
+    
+      <meta property="og:image" content="https://avatars0.githubusercontent.com/u/16966240?s=460&v=4">
+    
+
+    
+    
+    
+
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://rauleulogio.com/css/style-jsjn0006wyhpyzivf6yceb31gvpjatbcs3qzjvlumobfnugccvobqwxnnaj8.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="5">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://rauleulogio.com/">DataTq4</a>
+  </div>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="5">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://rauleulogio.com/#about">
+          <img class="sidebar-profile-picture" src="https://avatars0.githubusercontent.com/u/16966240?s=460&amp;v=4" alt="" />
+        </a>
+        <h4 class="sidebar-profile-name">Raul Eulogio</h4>
+        
+          <h5 class="sidebar-profile-bio">Aspiring Data Jedi</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://rauleulogio.com/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://rauleulogio.com/about/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About Me</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://rauleulogio.com/vitae/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">CV</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/raviolli77" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://twitter.com/raviolli77" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-twitter"></i>
+      
+      <span class="sidebar-button-desc">Twitter</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="5"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      Benchmarking Code in Python
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2018-07-09T00:00:00Z">
+        
+  
+  
+  
+  
+    2018-07-09
+  
+
+      </time>
+    
+    
+  
+  
+    <span></span>
+    
+      <a class="category-link" href="https://rauleulogio.com/categories/python">python</a>, 
+    
+      <a class="category-link" href="https://rauleulogio.com/categories/datascience">datascience</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              
+
+<p>When I first started programming I started to get the hang of <code>for-loops</code> and I basically applied them to everything that was iterable. Upon learning more about efficient coding for data science, I learned about vectorization (mostly through R and pySpark), so I wanted to showcase a simple case study as to when vectorization reigns supreme over <code>for-loops</code>.</p>
+
+<p>Although I will state that <code>for-loops</code> do allow the user to be a little more intimate with the function call and I do encourage everyone to become efficient at loops :)</p>
+
+<h1 id="load-packages">Load Packages</h1>
+
+<p>First we will load the appropriate packages, in this case we will be using <code>numpy</code>, <code>matplotlib</code> and <code>timeit</code>. I will provide a <code>requirements.txt</code> file for people utilizing <code>virtualenv</code> but if you&rsquo;re using <code>anaconda</code> the packages should already come pre-installed.</p>
+
+<ul>
+<li><a href="http://www.numpy.org/">numpy</a> - used to showcase the standard library for data enthusiast in python</li>
+<li><a href="https://matplotlib.org/">matplotlib</a> - plotting library to showcase differences in methods</li>
+<li><a href="https://docs.python.org/3/library/timeit.html">timeit</a> - package we will use to showcase difference in loops and vectorization through benchmarking</li>
+</ul>
+
+<pre><code class="language-python">import numpy as np
+import timeit
+import matplotlib.pyplot as plt
+
+# Set random seed for reproducibility
+np.random.seed(42)
+</code></pre>
+
+<p>Notice how I set the random seed here, this will be important in order for this walkthrough to be reproducibile. Although experimenting with different random seeds might produce different results!</p>
+
+<h1 id="define-looping-function">Define Looping Function</h1>
+
+<p>First I copy-pasted the function David created so that I can use it in this script. It is a simple function that produces the summation of an array. This is the way many people are taught when first learning python and programming.</p>
+
+<pre><code class="language-python">def vector_sum(vector):
+    # takes vector and returns the sum of its elements
+    s = 0
+    for i in vector:
+        s = s + i
+    return s
+</code></pre>
+
+<h1 id="define-vectorization">Define vectorization</h1>
+
+<p>The operation that we are going to be vectorization doesn&rsquo;t need to be defined as a function since it utilizes two <code>ufunc</code> functions from <code>numpy</code>.</p>
+
+<h2 id="ufunc-functions">ufunc functions</h2>
+
+<p>This is an important concept especially when utilizing <code>numpy</code> for data analysis (so all the time!). But many of these built-in operations are vectorized to perform fast and efficient processes.</p>
+
+<p>You can read more <a href="https://docs.scipy.org/doc/numpy/reference/ufuncs.html">here</a>.</p>
+
+<p>But if I were to give a TLDR; if you need to do an operation on data that doesn&rsquo;t require too many conditional statements use vectorized operations.</p>
+
+<p>It is written as such:</p>
+
+<pre><code class="language-python">np.add.reduce(vector)
+</code></pre>
+
+<p><strong>NOTE</strong>: Note upon further reading if the array has dimensions WxL where W is greater than 1, than <code>np.sum()</code> is a more appropriate function to use for our desired outcome.</p>
+
+<h1 id="check-to-see-if-both-operations-are-equal">Check to see if both operations are equal</h1>
+
+<p>I&rsquo;m going to create an array of length 100 with random values, and show that the <code>vector_sum</code> and <code>numpy</code> <code>ufunc</code> operations produce the same result.</p>
+
+<pre><code class="language-python">my_array = np.random.rand(100)
+</code></pre>
+
+<p>Let&rsquo;s check the array size first, this will be important to understand in a later section discussing benchmarking.</p>
+
+<pre><code class="language-python">len(my_array)
+</code></pre>
+
+<pre><code>100
+</code></pre>
+
+<p>Here I&rsquo;ll be utilizing the function on <code>my_array</code> and printing out the output with 5 significant values.</p>
+
+<pre><code class="language-python">print('{0: .5f}'.format(vector_sum(my_array)))
+</code></pre>
+
+<pre><code> 47.01807
+</code></pre>
+
+<p>Dope! Now I will use the <code>ufunc</code> operations and hopefully the results will be the same.</p>
+
+<pre><code class="language-python">print('{0: .5f}'.format(np.add.reduce(my_array)))
+</code></pre>
+
+<pre><code> 47.01807
+</code></pre>
+
+<p>As we can see we got the same results!</p>
+
+<p>The important aspect of this blog post is the time it takes to produce our results. For a data set with 100 values optimizing will most likely not be important, but when you start playing with larger data sets this will be important to produce fast and succinct data analysis.</p>
+
+<h1 id="benchmark-with-timeit">Benchmark with timeit</h1>
+
+<p>Now I will be using the <code>timeit</code> function where I will include the two operations as strings and include the parameter <code>globals = globals()</code>. This will recognize my current python environment (otherwise I would have to recreate everything within the function call which would be pretty tedious).</p>
+
+<p>I will tell it the number of iterations to do (in this case we will do 1000).</p>
+
+<pre><code class="language-python">print(
+    # Include function call in timeit
+    timeit.timeit('vector_sum(my_array)',
+    # Include global environment 
+    globals = globals(), 
+    # Number of iterations
+    number = 1000))
+</code></pre>
+
+<pre><code>0.026163638998696115
+</code></pre>
+
+<p>Now the <code>ufunc</code> operation:</p>
+
+<pre><code class="language-python">print(
+    timeit.timeit('np.add.reduce(my_array)', 
+    globals = globals(), 
+    number = 1000))
+</code></pre>
+
+<pre><code>0.0069110949989408255
+</code></pre>
+
+<h1 id="benchmarking-methods">Benchmarking Methods</h1>
+
+<p>Its already pretty obvious that the <code>numpy</code> operations performs significantly better than the <code>vector_sum</code> function, but to drive the point home I will do a loop that will do these operations on randomly generated arrays. The arrays will vary in size starting with an array of size 100 and ending with an array of size 10000.</p>
+
+<p>Then I will input the indices and the time it took to execute the operations into a dictionary which I will then plot to see the difference in time for the varying arrays.</p>
+
+<p>Note that the arrays generated at each loop are different since the random generator is being using on each operation seperately. In future iterations I would like to have the same arrays to give a more concrete comparison.</p>
+
+<pre><code class="language-python">vector_dict = {'vectorized': [], 
+              'for_loop': [],
+              'index': []}
+</code></pre>
+
+<p>Ironically I will be using a <code>for-loop</code> to append each respective key in the dictionary. Since they are being appended in a list inside a dictionary, the order will be kept. When iterating over a dictionary be careful because it will output in random order (Until Python 3.7 from what I&rsquo;ve heard).</p>
+
+<pre><code class="language-python">for i in range(100, 10000, 200):
+    # Create index 
+    vector_dict['index'].append(i)
+    # Create the array that will contain all time values for numpy operations
+    vector_dict['vectorized'].append(
+      timeit.timeit(
+        'np.add.reduce(np.random.rand(i))'.format(i), 
+        globals = globals(), 
+        number = 1000))
+    # Create the array that will contain all time values for `for-loop` function
+    vector_dict['for_loop'].append(
+      timeit.timeit(
+        'vector_sum(np.random.rand(i))'.format(i), 
+        globals = globals(), 
+        number = 1000))
+</code></pre>
+
+<p>So each key will have the values in a list from the first value (100) to the last (10000) in increments of 200 so 50 values overall.</p>
+
+<h1 id="plotting">Plotting</h1>
+
+<p>Next we will visualize the difference by ploting our index as our x-axis and y-axis containing the time it took to calculate that n-dimension array.</p>
+
+<pre><code class="language-python">plt.plot(vector_dict['index'], vector_dict['vectorized'], 'r')
+plt.plot(vector_dict['index'], vector_dict['for_loop'], 'g')
+plt.legend(('Map', 'For Loop'))
+plt.xlabel('Length of Randomly Created Arrays')
+plt.ylabel('Time for operation (1000 iterations for each array)')
+plt.show()
+</code></pre>
+
+<p><img src="https://i.imgur.com/7dNNSpi.png" alt="" /></p>
+
+<p>Now we can notice the huge difference in operations and the time it took to calculate them over different sized arrays. That cray-cray!</p>
+
+<h1 id="conclusions">Conclusions</h1>
+
+<p>I wanted to create this blog post because I&rsquo;ll often see beginners being taught a certain way of writing code, and its important to learn these methods. But we have to remember that there are other methods and operations that will significantly improve the run time of your code.</p>
+
+<p>The benefits of vectorization are evident when utilizing tools like R and pySpark, and might not be as clear when learning python. For most of my python experience learning data science, I didn&rsquo;t read too much documentation going over vectorization although it did feel like it was implied.</p>
+
+<p>So for a beginner like myself being able to see the differences in performance of methodologies can help reduce running time, but also understanding of more succinct data science practices.</p>
+
+<p>If you have any questions, suggestions or corrections reach out to me!</p>
+
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small"></span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://rauleulogio.com/tags/python/">python</a>
+
+  <a class="tag tag--primary tag--small" href="https://rauleulogio.com/tags/benchmarking/">benchmarking</a>
+
+  <a class="tag tag--primary tag--small" href="https://rauleulogio.com/tags/pandas/">pandas</a>
+
+  <a class="tag tag--primary tag--small" href="https://rauleulogio.com/tags/numpy/">numpy</a>
+
+  <a class="tag tag--primary tag--small" href="https://rauleulogio.com/tags/ufunc/">ufunc</a>
+
+                  </div>
+                
+              
+            
+            
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml"></span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://rauleulogio.com/2018/07/03/site-purpose/" data-tooltip="Site Purpose">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr"></span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://rauleulogio.com/2018/07/09/benchmarking-code-in-python/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://rauleulogio.com/2018/07/09/benchmarking-code-in-python/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://rauleulogio.com/2018/07/09/benchmarking-code-in-python/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2018 Raul Eulogio. 
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="5">
+        
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml"></span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://rauleulogio.com/2018/07/03/site-purpose/" data-tooltip="Site Purpose">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr"></span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://rauleulogio.com/2018/07/09/benchmarking-code-in-python/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://rauleulogio.com/2018/07/09/benchmarking-code-in-python/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://rauleulogio.com/2018/07/09/benchmarking-code-in-python/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="5">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Frauleulogio.com%2F2018%2F07%2F09%2Fbenchmarking-code-in-python%2F">
+          <i class="fa fa-facebook-official"></i><span>%!(EXTRA string=Facebook)</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Frauleulogio.com%2F2018%2F07%2F09%2Fbenchmarking-code-in-python%2F">
+          <i class="fa fa-twitter"></i><span>%!(EXTRA string=Twitter)</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Frauleulogio.com%2F2018%2F07%2F09%2Fbenchmarking-code-in-python%2F">
+          <i class="fa fa-google-plus"></i><span>%!(EXTRA string=Google&#43;)</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://avatars0.githubusercontent.com/u/16966240?s=460&amp;v=4" alt="" />
+    
+    <h4 id="about-card-name">Raul Eulogio</h4>
+    
+      <div id="about-card-bio">Aspiring Data Jedi</div>
+    
+    
+    
+  </div>
+</div>
+
+    <div id="algolia-search-modal" class="modal-container">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="close-button"><i class="fa fa-close"></i></span>
+      <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+        <span class="searchby-algolia-text text-color-light text-small">by</span>
+        <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+      </a>
+      <i class="search-icon fa fa-search"></i>
+      <form id="algolia-search-form">
+        <input type="text" id="algolia-search-input" name="search"
+          class="form-control input--large search-input" placeholder="" />
+      </form>
+    </div>
+    <div class="modal-body">
+      <div class="no-result text-color-light text-center"></div>
+      <div class="results">
+        
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://rauleulogio.com/2018/07/09/benchmarking-code-in-python/">
+                <h3 class="media-heading">Benchmarking Code in Python</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jul 7, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">When I first started programming I started to get the hang of for-loops and I basically applied them to everything that was iterable. Upon learning more about efficient coding for data science, I learned about vectorization (mostly through R and pySpark), so I wanted to showcase a simple case study as to when vectorization reigns supreme over for-loops.
+Although I will state that for-loops do allow the user to be a little more intimate with the function call and I do encourage everyone to become efficient at loops :)</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://rauleulogio.com/2018/07/03/site-purpose/">
+                <h3 class="media-heading">Site Purpose</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jul 7, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Not too long ago, I decided that website creation wasn&rsquo;t my cup of tea, so finding a purpose to build and maintain a website (besides putting on resume) was my first step in this site&rsquo;s creation.</p>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+      </div>
+    </div>
+    <div class="modal-footer">
+      <p class="results-count text-medium"
+         data-message-zero=""
+         data-message-one=""
+         data-message-other="">
+         2 posts found
+      </p>
+    </div>
+  </div>
+</div>
+    
+  
+    
+    <div id="cover" style="background-image:url('https://rauleulogio.com/images/cover.jpg');"></div>
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://rauleulogio.com/js/script-qi9wbxp2ya2j6p7wx1i6tgavftewndznf4v0hy2gvivk1rxgc3lm7njqb6bz.min.js"></script>
+
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/rauleulogio.com\/2018\/07\/09\/benchmarking-code-in-python\/';
+          
+            this.page.identifier = '\/2018\/07\/09\/benchmarking-code-in-python\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'rauleulogio-com';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+    
+  </body>
+</html>
+
