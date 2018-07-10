@@ -17,8 +17,9 @@
       <pubDate>Mon, 09 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>https://rauleulogio.com/2018/07/09/benchmarking-code-in-python/</guid>
-      <description>When I first started programming I started to get the hang of for-loops and I basically applied them to everything that was iterable. Upon learning more about efficient coding for data science, I learned about vectorization (mostly through R and pySpark), so I wanted to showcase a simple case study as to when vectorization reigns supreme over for-loops.
-Although I will state that for-loops do allow the user to be a little more intimate with the function call and I do encourage everyone to become efficient at loops :)</description>
+      <description>&lt;p&gt;When I first started programming I started to get the hang of &lt;code&gt;for-loops&lt;/code&gt; and I basically applied them to everything that was iterable. Upon learning more about efficient coding for data science, I learned about vectorization (mostly through R and pySpark), so I wanted to showcase a simple case study as to when vectorization reigns supreme over &lt;code&gt;for-loops&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>

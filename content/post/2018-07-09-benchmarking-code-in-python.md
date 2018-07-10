@@ -9,6 +9,8 @@ tags: [python, benchmarking, pandas, numpy, ufunc, datascience]
 
 When I first started programming I started to get the hang of `for-loops` and I basically applied them to everything that was iterable. Upon learning more about efficient coding for data science, I learned about vectorization (mostly through R and pySpark), so I wanted to showcase a simple case study as to when vectorization reigns supreme over `for-loops`.  
 
+<!--more-->
+
 Although I will state that `for-loops` do allow the user to be a little more intimate with the function call and I do encourage everyone to become efficient at loops :)
 
 # Load Packages
