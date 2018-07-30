@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Numpy on DataTq4</title>
-    <link>/tags/numpy/</link>
+    <link>https://rauleulogio.com/tags/numpy/</link>
     <description>Recent content in Numpy on DataTq4</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 09 Jul 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/numpy/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rauleulogio.com/tags/numpy/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Benchmarking Code in Python</title>
-      <link>/2018/07/09/benchmarking-code-in-python/</link>
+      <link>https://rauleulogio.com/2018/07/09/benchmarking-code-in-python/</link>
       <pubDate>Mon, 09 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/2018/07/09/benchmarking-code-in-python/</guid>
+      <guid>https://rauleulogio.com/2018/07/09/benchmarking-code-in-python/</guid>
       <description>&lt;p&gt;When I first started programming I started to get the hang of &lt;code&gt;for-loops&lt;/code&gt; and I basically applied them to everything that was iterable. Upon learning more about efficient coding for data science, I learned about vectorization (mostly through R and pySpark), so I wanted to showcase a simple case study as to when vectorization reigns supreme over &lt;code&gt;for-loops&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>

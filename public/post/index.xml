@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on DataTq4</title>
-    <link>/post/</link>
+    <link>https://rauleulogio.com/post/</link>
     <description>Recent content in Posts on DataTq4</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 09 Jul 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rauleulogio.com/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Benchmarking Code in Python</title>
-      <link>/2018/07/09/benchmarking-code-in-python/</link>
+      <link>https://rauleulogio.com/2018/07/09/benchmarking-code-in-python/</link>
       <pubDate>Mon, 09 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/2018/07/09/benchmarking-code-in-python/</guid>
+      <guid>https://rauleulogio.com/2018/07/09/benchmarking-code-in-python/</guid>
       <description>&lt;p&gt;When I first started programming I started to get the hang of &lt;code&gt;for-loops&lt;/code&gt; and I basically applied them to everything that was iterable. Upon learning more about efficient coding for data science, I learned about vectorization (mostly through R and pySpark), so I wanted to showcase a simple case study as to when vectorization reigns supreme over &lt;code&gt;for-loops&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -24,10 +24,10 @@
     
     <item>
       <title>Site Purpose</title>
-      <link>/2018/07/03/site-purpose/</link>
+      <link>https://rauleulogio.com/2018/07/03/site-purpose/</link>
       <pubDate>Tue, 03 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/2018/07/03/site-purpose/</guid>
+      <guid>https://rauleulogio.com/2018/07/03/site-purpose/</guid>
       <description>&lt;p&gt;Not too long ago, I decided that website creation wasn&amp;rsquo;t my cup of tea, so finding a purpose to build and maintain a website (besides putting on resume) was my first step in this site&amp;rsquo;s creation.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>

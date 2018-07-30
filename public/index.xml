@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DataTq4</title>
-    <link>/</link>
+    <link>https://rauleulogio.com/</link>
     <description>Recent content on DataTq4</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 09 Jul 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rauleulogio.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Benchmarking Code in Python</title>
-      <link>/2018/07/09/benchmarking-code-in-python/</link>
+      <link>https://rauleulogio.com/2018/07/09/benchmarking-code-in-python/</link>
       <pubDate>Mon, 09 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/2018/07/09/benchmarking-code-in-python/</guid>
+      <guid>https://rauleulogio.com/2018/07/09/benchmarking-code-in-python/</guid>
       <description>&lt;p&gt;When I first started programming I started to get the hang of &lt;code&gt;for-loops&lt;/code&gt; and I basically applied them to everything that was iterable. Upon learning more about efficient coding for data science, I learned about vectorization (mostly through R and pySpark), so I wanted to showcase a simple case study as to when vectorization reigns supreme over &lt;code&gt;for-loops&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -24,19 +24,19 @@
     
     <item>
       <title>Curriculum Vitae</title>
-      <link>/vitae/</link>
+      <link>https://rauleulogio.com/vitae/</link>
       <pubDate>Tue, 03 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/vitae/</guid>
+      <guid>https://rauleulogio.com/vitae/</guid>
       <description>Co-Founder Inertia7.com (July 2017 - today)  Contributed to over 30% of the open-source data science knowledge base on the web application Increased website traffic with integration of Data Science @ UCSB and Data Science Inc.    Content Writer Data Science Inc. (December 2017 – now)  Contributed guest articles featuring walk-throughs for data science applications Explained Machine Learning algorithms and implementation with both R and Python garnering over 4k views Created interactive dashboards to showcase machine learning models and time series forecasting using Shiny (R) and Dash (Python)    Data Analyst Hospice of Santa Barbara (July 2017 - today)  Utilize the E.</description>
     </item>
     
     <item>
       <title>Site Purpose</title>
-      <link>/2018/07/03/site-purpose/</link>
+      <link>https://rauleulogio.com/2018/07/03/site-purpose/</link>
       <pubDate>Tue, 03 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/2018/07/03/site-purpose/</guid>
+      <guid>https://rauleulogio.com/2018/07/03/site-purpose/</guid>
       <description>&lt;p&gt;Not too long ago, I decided that website creation wasn&amp;rsquo;t my cup of tea, so finding a purpose to build and maintain a website (besides putting on resume) was my first step in this site&amp;rsquo;s creation.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -44,12 +44,13 @@
     
     <item>
       <title>About Me</title>
-      <link>/about/</link>
+      <link>https://rauleulogio.com/about/</link>
       <pubDate>Wed, 07 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/about/</guid>
+      <guid>https://rauleulogio.com/about/</guid>
       <description>My name is Raul Eulogio. I&amp;rsquo;m an aspiring data scientist. I started this website for the purpose of blogging and documenting my own self learning.
-If you have any questions or want to collab hit me up!</description>
+If you have any questions or want to collab hit me up!
+All opinions and views are my own and do not represent my employer or affliated organizations.</description>
     </item>
     
   </channel>
